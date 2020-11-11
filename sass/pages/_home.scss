@@ -1,0 +1,38 @@
+.section-about {
+    background-color: $color-costal-breeze;
+    padding: 25rem 0;
+    margin: -40vh 0 -20vh 0;
+}
+
+.section-features {
+    padding: 15rem 0;
+    background-image: 
+        linear-gradient(
+            to right bottom,
+            rgba($color-emerald,0.8),
+            rgba($color-nephritis,0.8)),
+            url(../img/IMG_20180512_145244_420.jpg);
+    background-size: cover;
+    transform: skewY(7deg);
+
+    & > * {
+        transform: skewY(-7deg);
+    }
+
+}
+
+.section-tours {
+    background-color: $color-costal-breeze;
+    padding: 20rem 0 10rem 0;
+    margin-top: -13rem;
+}
+
+.section-stories {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.section-booking {
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom, $color-emerald, $color-nephritis);
+}

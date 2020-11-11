@@ -1,0 +1,22 @@
+.feature-box {
+    background-color: rgba($color-clouds, .85);
+    font-size: 1.5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-midnight-blue, .15);
+    padding: 1rem;
+    border-radius: 3px;
+    text-align: center;
+    transition: transform .2s;
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.3);
+    }
+
+
+    &__icon {
+        font-size: 7rem;
+        margin: 3rem;
+        background-image: linear-gradient(to right, $color-nephritis, $color-emerald);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}

@@ -1,0 +1,13 @@
+.booking {
+    width: 90%;
+    margin: 1rem auto;
+    background-image: url(../../img/434333230_185348.jpg);
+    box-shadow: 0 2rem 3rem rgba($color-midnight-blue, .8);
+
+    &__content {
+        padding: 3rem;
+        background-color: rgba($color-clouds, .9);
+        width: 100%;
+        clip-path: polygon(0 0, 60% 0, 50% 100%, 0 100%);
+    }
+}

@@ -1,0 +1,77 @@
+.btn {
+    &__small {
+        padding: .5rem 2.5rem;
+    }
+
+    &__medium {
+        padding: 1rem 3rem;
+    }
+
+    &__large {
+        padding: 1.5rem 3.5rem;
+    }
+
+    &, &:link, &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        box-shadow: 0 .2rem 1rem rgba($color-midnight-blue, 0.1);
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 3rem rgba($color-midnight-blue, 0.3);
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 2rem rgba($color-midnight-blue, 0.3);
+    }
+    
+    &--white {
+        background-color: $color-clouds;
+        color: $color-concrete;
+    }
+
+    &--green {
+        background-color: $color-green-sea;
+        color: $color-clouds;
+    }
+
+    &--animated {
+        animation: moveInTop 0.5s ease-out 1s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:visited,
+    &:link {
+        font-size: $default-font-size;
+        display: inline-block;
+        color: $color-emerald;
+        text-decoration: none;
+        border-bottom: 1px solid $color-emerald;
+        padding: 3px;
+        transform: translateY(0);
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-emerald;
+        color: $color-clouds;
+        box-shadow: 0 1rem 5rem rgba($color-midnight-blue, .15);
+        transform: translateY(-.5rem);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 2rem rgba($color-midnight-blue, .15);
+        transform: translateY(0);
+    }
+}

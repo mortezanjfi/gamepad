@@ -1,0 +1,85 @@
+.form {
+    &__input {
+        background-color: $color-costal-breeze;
+        padding: 2rem;
+        width: 37%;
+        border: none;
+        border-bottom: 5px solid transparent;
+        border-radius: .2rem;
+        display: block;
+        transition: all .5s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 2rem 3rem rgba($color-midnight-blue, .1);
+            border-bottom: 5px solid $color-emerald;
+        }
+
+        &:focus:invalid {
+            border-bottom: 5px solid $color-pomegranate;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-wet-asphalt;
+        }
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        color: $color-midnight-blue;
+        margin-left: 2rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__radio {
+        &-group {
+            display: inline-block;
+            width: 25%;
+        }
+
+        &-label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 4rem;
+            font-size: $default-font-size;
+        }
+
+        &-button {
+            display: inline-block;
+            height: 3rem;
+            width: 3rem;
+            border: 5px solid $color-nephritis;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            left: 0;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: $color-nephritis;
+                border-radius: 50%;
+                @include absCenter;
+                opacity: 0;
+                transition: opacity .2s;
+            }
+        }
+
+        &-input:checked ~ &-label &-button::after {
+            opacity: 1;
+        }
+
+        &-input {
+            display: none;
+        }
+    }
+}
